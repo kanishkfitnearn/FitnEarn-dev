@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 type CardProps = {
+  id:number;
   name: string;
   rating: number;
   description: string;

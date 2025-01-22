@@ -4,7 +4,7 @@ import Link from "next/link";
 
 type cardProps = {
   id: number;
-  imageUrl: string; // Accept imageUrl as a prop
+  imageUrl?: string; // Accept imageUrl as a prop
   label: string;
   name: string;
   description: string;
@@ -36,7 +36,7 @@ const Card: React.FC<cardProps> = ({
       <div className="relative">
         <Link href={`/ProductInfo/${id}`}>
         <Image
-          src={imageUrl} // Use dynamic image URL here
+          src={imageUrl || "/mat.png"} // Use dynamic image URL here
           alt="Yoga_mat" // Alt text can be dynamic too, if needed
           layout="fixed"
           width={380}

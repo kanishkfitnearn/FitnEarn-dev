@@ -50,7 +50,7 @@ const GymDetails = ({ params }: any) => {
     }
   };
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -61,7 +61,7 @@ const GymDetails = ({ params }: any) => {
   //       setIsOpen(false);
   //     }
   //   };
-
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
