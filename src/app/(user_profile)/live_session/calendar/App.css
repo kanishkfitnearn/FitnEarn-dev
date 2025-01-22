@@ -1,0 +1,101 @@
+@import "../../../../../node_modules/@syncfusion/ej2-base/styles/material.css";
+
+@import "../../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+@import "../../../../../node_modules/@syncfusion/ej2-base/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-buttons/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-calendars/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-inputs/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-navigations/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-popups/styles/material-dark.css";
+@import "../../../../../node_modules/@syncfusion/ej2-react-schedule/styles/material-dark.css";
+/* Custom styles for dark theme */
+.dark-schedule.e-schedule {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Header styles */
+.dark-schedule .e-schedule-toolbar,
+.dark-schedule .e-schedule-toolbar .e-toolbar-items {
+  background-color: #2d2d2d;
+  border-color: #404040;
+}
+
+/* Cell styles */
+.dark-schedule .e-schedule-table td {
+  background-color: #1a1a1a;
+  border-color: #404040;
+}
+
+/* Today cell highlight */
+.dark-schedule .e-schedule-table td.e-current-day {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Work hours */
+.dark-schedule .e-work-hours {
+  background-color: #262626;
+}
+
+/* Non-work hours */
+.dark-schedule .e-non-work-hours {
+  background-color: #1f1f1f;
+}
+
+/* Header cells */
+.dark-schedule .e-header-cells {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Time cells */
+.dark-schedule .e-time-cells {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Event styles */
+.dark-schedule .e-appointment {
+  background-color: #ff5722;
+  color: #ffffff;
+}
+
+/* Current time indicator */
+.dark-schedule .e-current-time {
+  background-color: #ff5722;
+}
+
+/* Month view specific */
+.dark-schedule .e-month-view .e-date-header {
+  background-color: #2d2d2d;
+}
+
+/* Agenda view specific */
+.dark-schedule .e-agenda-view .e-agenda-day {
+  background-color: #2d2d2d;
+}
+
+/* More events popup */
+.dark-schedule .e-more-popup {
+  background-color: #2d2d2d;
+  border-color: #404040;
+}
+
+/* Quick popup */
+.dark-schedule .e-quick-popup-wrapper {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+/* Hover states */
+.dark-schedule .e-schedule-table td:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

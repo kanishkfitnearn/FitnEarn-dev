@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+    parameters {
+        choice(
+            name: 'BRANCH',
+            choices: ['dev', 'development', 'master', 'qa', 'jenkine-deployment-v1'],
+            description: 'Branch to build and deploy'
+        )
+    }
+    tools {
+        nodejs 'nodejs'
+    }
+     environment {
+        STABLE_COMMIT = '' // This will be set dynamically
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    STABLE_COMMIT = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+                }
+                git branch: "${params.BRANCH}", url: 'https://github.com/Fit-earn-meditate/fitnearn_web_FE'
+            }
+        }
+        stage('Build and Start PM2') {
+            steps {
+                // Run npm install and npm run build
+                echo 'starting pm2 by building new app'
+                sh 'sudo npm install'
+                sh 'sudo npm run build'
+                // Stop the process if it's running as ubuntu user
+                sh 'pm2 stop fitnearn_web_FE_dev|| true'
+                // Start the process as ubuntu user
+                sh 'pm2 start npm --name fitnearn_web_FE_dev -- start'
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                echo 'Deployment was successful!'
+            }
+        }
+        failure {
+            script {
+                echo 'Deployment failed. Rolling back to the previous stable commit.'
+                // Git Rollback
+                sh "git checkout ${STABLE_COMMIT}"
+                sh 'npm install'
+                sh 'npm run build'
+                sh 'pm2 stop fitnearn_web_FE_dev || true'
+                sh 'pm2 start npm --name fitnearn_web_FE_dev -- start'
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+styles/custom-scheduler-theme.css
+  .css-10vjzfb-MuiButtonBase-root-MuiButton-root {
+  background-color: #000000; /* Set background to black */
+  color: #ffffff; /* Set text color to white */
+}
+
+h6 {
+  color: white;
+}
+
+.scheduler-header,
+.scheduler-event,
+.scheduler-sidebar {
+  background-color: #222222; /* Dark grey background for headers and sidebar */
+  color: #ffffff; /* White text color */
+}
+
+.scheduler-button,
+.scheduler-input {
+  background-color: #333333; /* Slightly lighter dark background for buttons and inputs */
+  color: #ffffff; /* White text color */
+  border: 1px solid #555555; /* Border color */
+}
+
+.scheduler-event {
+  background-color: #444444; /* Event background */
+  color: #ffffff; /* Event text color */
+  border: 1px solid #666666; /* Event border color */
+}
+
+.scheduler-today {
+  background-color: #555555; /* Today's date background */
+  color: #ffffff; /* Today's date text color */
+}
+
+.scheduler-selected {
+  background-color: #666666; /* Selected date background */
+  color: #ffffff; /* Selected date text color */
+}
+
+/* Customize other elements as needed */
+.scheduler-day,
+.scheduler-hour,
+.scheduler-min {
+  background-color: #000000; /* Set background to black */
+  color: #ffffff; /* Set text color to white */
+}

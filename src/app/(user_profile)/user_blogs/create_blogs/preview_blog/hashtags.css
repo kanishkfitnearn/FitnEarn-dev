@@ -1,0 +1,56 @@
+.react-tags__selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px;
+  background-color: #333; /* Background for the tag input container */
+}
+.react-tags__combobox-input {
+  width: 133px;
+  background: black;
+  border-radius: 10px;
+}
+
+.react-tags__tag {
+  background-color: #444;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.react-tags__tag__remove {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.react-tags__suggestions {
+  margin-top: 10px;
+  background-color: #222;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.react-tags__suggestions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.react-tags__suggestions li {
+  padding: 10px;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+  color: #fff;
+}
+
+.react-tags__suggestions li:hover {
+  background-color: #444;
+}
+
+.react-tags__suggestions li:last-child {
+  border-bottom: none;
+}
+.tags-input {
+  height: 38px;
+}

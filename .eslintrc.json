@@ -1,0 +1,13 @@
+{
+  "extends": ["next", "next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    // "prettier/prettier": ["warn", { "singleQuote": false }],
+    // "quotes": ["warn", "double"],
+    // "semi": ["warn", "always"],
+    // "indent": ["warn", 2],
+    // "no-unused-vars": "warn",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  }
+}
